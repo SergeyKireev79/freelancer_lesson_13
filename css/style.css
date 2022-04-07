@@ -1,0 +1,286 @@
+.main{
+width: 100%;   
+}
+.car {
+max-width: 1700px;
+position: relative;
+height: 1000px;
+animation-name: car;
+animation-duration: 3s;
+animation-timing-function: linear;
+
+animation-iteration-count: infinite;
+animation-direction: alternate;
+}
+@keyframes car{
+   0% {
+      transform: translate(0px, 0px);
+      }
+      100% {
+         transform: translate(3000px, 0px);
+      }
+}
+
+.car:hover{
+   animation-play-state: paused;
+}
+.wheel {
+position: absolute;
+width: 200px;
+height: 200px;
+background-color: rgb(41, 39, 39);
+border-radius: 50%;
+top: 800px;
+z-index: 1;
+animation-name: wheel;
+animation-duration: 3s;
+animation-timing-function: linear;
+
+animation-iteration-count: infinite;
+animation-direction: alternate;
+}  
+
+
+@keyframes wheel{
+   0% {
+      transform: rotate(0deg);
+      }
+      100% {
+      transform: rotate(360deg);
+      }
+}
+.wheel_first {
+   left: 400px;
+   }
+.wheel_second {
+   left: 1200px;
+   }
+      .wheel__disk {
+         transform: translate(25px, 25px);
+         width: 150px;
+         height: 150px;
+         border-radius: 50%;
+         border: solid 4px rgb(240, 229, 229);
+         box-shadow:2px 2px 20px red;
+      }
+      .wheel__spooke{
+         width: 142px;
+         height: 4px;
+         background-color: rgb(240, 229, 229);
+         box-shadow:2px 2px 20px red;
+      }
+      .wheel__spooke_1 {
+         transform: translate(0px, 68px);
+      }
+      .wheel__spooke_2 {
+         transform: translate(0px, 64px) rotate(90deg);
+      }
+      .wheel__spooke_3 {
+         transform: translate(0px, 60px) rotate(45deg);
+         }
+      .wheel__spooke_4 { 
+         transform: translate(0px, 56px) rotate(-45deg);
+      }
+      .carcass__hood {
+         width: 500px;
+         height: 300px;
+         background-color:  rgb(189, 186, 3);
+         transform: translate(1100px, 600px);
+         overflow: hidden;
+         border-radius: 0% 55% 30% 0%;
+      }
+      .carcass__arc {
+            width: 270px;
+            height: 270px;
+            background-color: black;
+            border-radius: 50%;
+            border: solid 20px grey;
+            box-shadow:inset 2px 2px 20px rgb(116, 113, 113);
+            box-shadow:0px 0px 20px rgb(116, 113, 113);
+          }
+      .carcass__arc_first {
+         transform: translate(65px, 160px);
+      }
+      .carcass__front-light {
+         width: 200px;
+         height: 100px;
+         background-color: rgb(198, 209, 241);
+         border-radius: 100% 0% 0% 20%;
+         transform: translate(350px, -250px) rotate(20deg);
+         box-shadow:0px 0px 20px rgb(116, 113, 113),
+         0px 0px 20px rgb(116, 113, 113);
+         animation-name: front;
+         animation-duration: 3s;
+         animation-iteration-count: infinite;
+         animation-timing-function:linear;
+      }
+
+      @keyframes front{
+         0% {
+            background-color: rgb(198, 209, 241);
+            }
+            100% {
+               background-color: rgb(247, 243, 5);
+            }
+      }
+      
+      .carcass__turn-signal{
+         width: 60px;
+         height: 30px;
+         background-color: rgb(198, 209, 241);
+         border-radius: 100% 100% 100% 100%;
+         transform: translate(160px, -330px);
+         box-shadow:2px 0px 20px rgb(116, 113, 113);
+         animation-name: turn;
+         animation-duration: 1s;
+         animation-iteration-count: infinite;
+         animation-timing-function: linear;
+      }
+      @keyframes turn{
+         0% {
+            background-color: rgb(198, 209, 241);
+            }
+            100% {
+               background-color: rgb(243, 160, 7);
+            }
+      }
+    
+      .carcass__middle {
+         width: 455px;
+         height: 300px;
+         background-color:  rgb(189, 186, 3);
+         transform: translate(648px, 300px);
+        }
+      .carcass__step{
+         width: 550px;
+         height: 20px;
+         background-color: grey;
+        transform: translate(631px, -736px);
+        box-shadow:2px 0px 20px rgb(116, 113, 113);
+      }
+      .carcass__trunk {
+         width: 350px;
+         height: 300px;
+         background-color: rgb(189, 186, 3);
+         transform: translate(300px, 00px);
+         overflow: hidden;
+         border-radius: 30% 0% 0% 30%;
+      }
+         .carcass__arc_second {
+         transform: translate(65px, 160px);
+      }
+      .carcass__back-light{
+         width: 70px;
+         height: 150px;
+         background-color: rgb(198, 209, 241);
+         transform: translate(-10px, -250px);
+         border-radius: 30% 40% 30% 5%;
+         box-shadow:0px 0px 20px rgb(116, 113, 113);
+         animation-name: back;
+         animation-duration: 3s;
+         animation-iteration-count: infinite;
+         animation-timing-function:linear;
+      }
+
+      @keyframes back{
+         0% {
+            background-color: rgb(198, 209, 241);
+            }
+            100% {
+               background-color: rgba(247, 7, 7, 0.959);
+            }
+      }
+      
+      .carcass__cabin{
+         width: 900px;
+         height: 300px;
+         background-color:  rgb(189, 186, 3);
+         transform: translate(300px, -580px) rotate(0deg) skew(15deg);
+         border-radius: 100% 100% 0% 0%;
+      }
+      .carcass__mirror{
+         width: 90px;
+         height: 50px;
+         background-color:  grey;
+         transform: translate(240px, 150px) skew(10deg);
+         border-radius: 100% 30% 30% 100%;
+         box-shadow:2px 0px 10px rgb(116, 113, 113);
+         box-shadow: inset  2px 0px 20px rgb(189, 186, 3);
+      }
+      .carcass__window{
+         height: 200px;
+         border: solid 3px grey;
+         background-color: rgb(198, 209, 241);
+         box-shadow:2px 0px 20px rgb(116, 113, 113);
+         }
+      .carcass__window_right{
+         width: 300px;
+         transform: translate(850px, -800px) skew(15deg);
+         border-radius: 00% 60% 0% 0%;
+      }
+      .carcass__window_left{
+         width: 330px;
+         transform: translate(450px, -1000px) skew(15deg);
+         border-radius: 40% 0% 0% 0%;
+      }
+      .carcass__door{
+         width: 300px;
+         height: 4px;
+         background-color: grey;
+         box-shadow:2px 0px 20px rgb(116, 113, 113);
+         }
+      .carcass__door_first {
+         transform: translate(768px, -858px) rotate(75deg);
+      }
+      .carcass__door_second {
+         transform: translate(693px, -862px) rotate(75deg);
+      }
+      .carcass__door_third {
+         width: 170px;
+         transform: translate(415px, -930px) rotate(75deg);
+      }
+      .carcass__door_fourth {
+         width: 200px;
+         transform: translate(1100px, -920px) rotate(75deg);
+      }
+      .carcass__handle {
+         width: 50px;
+         height: 15px;
+         background-color: grey;
+         border-radius: 100% 100% 0% 0%;
+         box-shadow:2px 0px 20px rgb(116, 113, 113);
+         box-shadow: inset  2px 0px 7px rgb(189, 186, 3);
+      }
+      .carcass__handle_first {
+         transform: translate(210px, -400px) 
+      }
+      .carcass__handle_second {
+         transform: translate(260px, 20px) 
+      }
+      .carcass__pipe{
+         width: 50px;
+         height: 30px;
+         background-color:  rgb(34, 33, 33);
+         position: absolute;
+         top: 850px;
+         left: 290px;
+         border-radius: 30% 0% 0% 30%;
+         box-shadow:2px 0px 5px rgb(116, 113, 113);
+         animation-name: pipe;
+         animation-duration: 0.1s;
+         animation-delay: 2s;
+         animation-iteration-count: infinite;
+        
+      }
+      @keyframes pipe{
+         0% {
+            box-shadow: 0px 0px 20px rgb(90, 87, 87);
+            }
+            100% {
+               box-shadow: -50px 0px 20px rgb(90, 87, 87);
+            }
+      }
+      .carcass__pipe:hover{
+      box-shadow: -50px 0px 20px rgb(90, 87, 87);
+      }
+
